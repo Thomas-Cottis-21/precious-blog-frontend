@@ -1,10 +1,11 @@
-import {Button} from "@mui/material";
+import {Box, Button} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {fetchAllPosts} from "../redux/slices/all-posts-slice.ts";
 import {AppDispatch, RootState} from "../redux/store.ts";
 import {PostReference} from "../types/post-reference.ts";
+import {MainNavBar} from "../components/ui/main-navbar.tsx";
 
 export const HomePage = () => {
     const navigate = useNavigate();
@@ -37,8 +38,10 @@ export const HomePage = () => {
     }
 
     return (
-        <div>
+        <Box>
+            <MainNavBar />
             <h1>HOME</h1>
+            <h2>Subtitle</h2>
             <Button onClick={() => navigate("/login")}>Login</Button>
             <Button onClick={() => navigate("/register")}>Register</Button>
             {Array.isArray(posts) && posts.map((post: PostReference) => (
@@ -47,6 +50,6 @@ export const HomePage = () => {
                     <p>{post.editor.firstName}</p>
                 </div>
             ))}
-        </div>
+        </Box>
     );
 }
