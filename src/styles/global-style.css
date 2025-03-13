@@ -1,13 +1,41 @@
 @font-face {
     font-family: 'Playfair Display';
-    src: url('../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf') format('opentype');
+    src: url('../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Alice';
-    src: url('../assets/fonts/Alice-Regular.ttf') format('opentype');
+    src: url('../assets/fonts/Alice-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AmaticSC';
+    src: url("../assets/fonts/AmaticSC-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Andika';
+    src: url("../assets/fonts/Andika-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JosefinSans';
+    src: url("../assets/fonts/JosefinSans-VariableFont_wght.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'YesevaOne';
+    src: url("../assets/fonts/YesevaOne-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }

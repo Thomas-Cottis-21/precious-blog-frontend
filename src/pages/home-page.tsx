@@ -41,7 +41,8 @@ export const HomePage = () => {
         <Box>
             <MainNavBar />
             <h1>HOME</h1>
-            <h2>Subtitle</h2>
+            <h2>HOME</h2>
+            <h2>Subtitle in H2</h2>
             <Button onClick={() => navigate("/login")}>Login</Button>
             <Button onClick={() => navigate("/register")}>Register</Button>
             {Array.isArray(posts) && posts.map((post: PostReference) => (

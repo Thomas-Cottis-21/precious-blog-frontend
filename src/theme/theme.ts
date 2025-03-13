@@ -2,14 +2,22 @@ import {createTheme, Theme} from "@mui/material";
 
 export const theme: Theme = createTheme({
     typography: {
-        fontFamily: "Playfair Display, roboto",
+        fontFamily: [
+            'AmaticSC',
+            'Andika',
+            'Playfair Display',
+            'Alice',
+            'JosefinSans',
+            'YosevaOne'
+        ].join(', '),
     },
     components: {
         MuiButton: {
             styleOverrides: {
                 root: {
                     textTransform: "none",
-                    margin: 5
+                    margin: 5,
+                    fontFamily: 'Playfair Display, roboto'
                 }
             }
         }
