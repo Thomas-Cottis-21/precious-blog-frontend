@@ -1,5 +1,4 @@
-import {AppBar, Box, Button, Container, IconButton, Toolbar} from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
+import {AppBar, Box, Button, Container, Toolbar, Typography} from "@mui/material";
 import LocalFloristIcon from '@mui/icons-material/LocalFlorist';
 import {theme} from "../../theme/theme.ts";
 
@@ -11,12 +10,15 @@ export const MainNavBar = () => {
         }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <IconButton
-                        color='primary'
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <LocalFloristIcon />
+                    {/*<IconButton*/}
+                    {/*    color='primary'*/}
+                    {/*>*/}
+                    {/*    <MenuIcon />*/}
+                    {/*</IconButton>*/}
+                    <LocalFloristIcon sx={{ color: theme.palette.primary.main }} />
+                    <Typography component="h1" variant="h6" color={theme.palette.text.primary}>
+                        You are precious
+                    </Typography>
 
                     <Box sx={{ flexGrow: 1 }}/>
                     <Box sx={{ display: {xs: 'none', md: 'flex'}, ms: 'auto'}}>

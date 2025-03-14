@@ -2,14 +2,24 @@ import {createTheme, Theme} from "@mui/material";
 
 export const theme: Theme = createTheme({
     typography: {
-        fontFamily: [
-            'AmaticSC',
-            'Andika',
-            'Playfair Display',
-            'Alice',
-            'JosefinSans',
-            'YosevaOne'
-        ].join(', '),
+        h1: {
+            fontSize: '2.5rem',
+            fontWeight: 'bold',
+            textTransform: 'uppercase',
+            fontFamily: 'Playfair Display',
+        },
+        h6: {
+            fontSize: '1rem',
+            fontWeight: 'bold',
+            textTransform: 'uppercase',
+            fontFamily: 'Playfair Display',
+        },
+        subtitle1: {
+            fontSize: '1.5rem',
+            fontWeight: 'normal',
+            textTransform: 'none',
+            fontFamily: 'JosefinSans',
+        }
     },
     components: {
         MuiButton: {
@@ -17,7 +27,7 @@ export const theme: Theme = createTheme({
                 root: {
                     textTransform: "none",
                     margin: 5,
-                    fontFamily: 'Playfair Display, roboto'
+                    fontFamily: 'YesevaOne'
                 }
             }
         }
