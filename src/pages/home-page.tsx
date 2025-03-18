@@ -1,5 +1,4 @@
-import {Box, Button, Container, Typography} from "@mui/material";
-import {useNavigate} from "react-router-dom";
+import {Box, Container, Typography} from "@mui/material";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {fetchAllPosts} from "../redux/slices/all-posts-slice.ts";
@@ -8,7 +7,6 @@ import {PostReference} from "../types/post-reference.ts";
 import {MainNavBar} from "../components/ui/main-navbar.tsx";
 
 export const HomePage = () => {
-    const navigate = useNavigate();
     const dispatch = useDispatch<AppDispatch>();
     const {posts, loading, error} = useSelector((state: RootState) => state.allPosts);
 
