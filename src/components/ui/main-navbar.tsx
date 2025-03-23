@@ -1,42 +1,30 @@
-import {AppBar, Box, Button, Container, Toolbar, Typography} from "@mui/material";
-import LocalFloristIcon from '@mui/icons-material/LocalFlorist';
-import {theme} from "../../theme/theme.ts";
+import {Container, Nav, Navbar} from "react-bootstrap";
+import {Link} from "react-router-dom";
+
 
 export const MainNavBar = () => {
     return (
-        <AppBar position="static" sx={{
-            background: theme.palette.background.default,
-            boxShadow: 'none',
-        }}>
-            <Container maxWidth="xl">
-                <Toolbar disableGutters>
-                    {/*<IconButton*/}
-                    {/*    color='primary'*/}
-                    {/*>*/}
-                    {/*    <MenuIcon />*/}
-                    {/*</IconButton>*/}
-                    <LocalFloristIcon sx={{ color: theme.palette.primary.main }} />
-                    <Typography component="h1" variant="h6" color={theme.palette.text.primary}>
-                        You are precious
-                    </Typography>
-
-                    <Box sx={{ flexGrow: 1 }}/>
-                    <Box sx={{ display: {xs: 'none', md: 'flex'}, ms: 'auto'}}>
-                        <Button color="primary" variant='text'>
-                            Home
-                        </Button>
-                        <Button color="primary" variant="text">
-                            About
-                        </Button>
-                        <Button color="primary" variant="outlined">
-                            Log in
-                        </Button>
-                        <Button color="primary" variant="contained">
-                            Sign up
-                        </Button>
-                    </Box>
-                </Toolbar>
+        <Navbar expand="lg">
+            <Container>
+                <Navbar.Brand style={{
+                    fontFamily: "Alice",
+                }}>
+                    <img
+                        src="../../../public/images/logo/Pink_blue_floral_bouquet_with_watercolor-removebg-preview.png"
+                        alt="logo"
+                        width="120"
+                    />
+                    You are precious
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="ms-auto">
+                        <Nav.Item as={Link} to="/">Home</Nav.Item>
+                        <Nav.Item as={Link} to="/">Categories</Nav.Item>
+                        <Nav.Item as={Link} to="/">About</Nav.Item>
+                    </Nav>
+                </Navbar.Collapse>
             </Container>
-        </AppBar>
+        </Navbar>
     );
 }
