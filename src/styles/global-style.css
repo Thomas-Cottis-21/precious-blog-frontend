@@ -1,3 +1,4 @@
+/* ----- TYPOGRAPHY ----- */
 @font-face {
     font-family: 'Playfair Display';
     src: url('../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
@@ -39,7 +40,21 @@
     font-weight: normal;
     font-style: normal;
 }
+.title {
+    font-family: 'Playfair Display';
+    font-size: 2.5rem;
+    color: black;
+}
+.subtitle {
+    font-family: 'Playfair Display';
+    font-size: 1.75rem;
+    color: black;
+}
+p {
+    font-family: "Alice"
+}
 
+/* ----- NAVIGATION ----- */
 .nav-item {
     padding: 1rem;
     color: black;
