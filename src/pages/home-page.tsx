@@ -5,7 +5,7 @@ import {AppDispatch, RootState} from "../redux/store.ts";
 import {PostReference} from "../types/post-reference.ts";
 import {MainNavBar} from "../components/ui/main-navbar.tsx";
 import {Col, Container, Row} from "react-bootstrap";
-import {PostPreview} from "../components/post/post-preview.tsx";
+import {PostReferenceMain} from "../components/post/post-reference.tsx";
 
 export const HomePage = () => {
     const dispatch = useDispatch<AppDispatch>();
@@ -39,23 +39,27 @@ export const HomePage = () => {
     return (
         <>
             <MainNavBar />
-            {posts && posts.length > 0 && (
-                <Container>
-                    <Row>
-                        <Col>
-                            <PostPreview post={posts[0]} />
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <PostPreview post={posts[1]} />
-                        </Col>
-                        <Col>
-                            <PostPreview post={posts[2]} />
-                        </Col>
-                    </Row>
-                </Container>
-            )}
+            <Container fluid>
+                <Row>
+                    <Col>
+                        <PostReferenceMain post={posts[0]} />
+                    </Col>
+                    <Col>
+                        <PostReferenceMain post={posts[1]} />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <PostReferenceMain post={posts[0]} />
+                    </Col>
+                    <Col>
+                        <PostReferenceMain post={posts[1]} />
+                    </Col>
+                    <Col>
+                        <PostReferenceMain post={posts[1]} />
+                    </Col>
+                </Row>
+            </Container>
         </>
     );
 }
