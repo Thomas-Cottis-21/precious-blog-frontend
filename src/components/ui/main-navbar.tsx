@@ -1,42 +1,37 @@
-import {AppBar, Box, Button, Container, Toolbar, Typography} from "@mui/material";
-import LocalFloristIcon from '@mui/icons-material/LocalFlorist';
-import {theme} from "../../theme/theme.ts";
+import {Container, Nav, Navbar} from "react-bootstrap";
+import globalStyle from "../../styles/global.module.css";
 
 export const MainNavBar = () => {
     return (
-        <AppBar position="static" sx={{
-            background: theme.palette.background.default,
-            boxShadow: 'none',
+        <Navbar expand="md" style={{
+            fontFamily: "Playfair Display",
+            backgroundColor: "#3a5a40"
         }}>
-            <Container maxWidth="xl">
-                <Toolbar disableGutters>
-                    {/*<IconButton*/}
-                    {/*    color='primary'*/}
-                    {/*>*/}
-                    {/*    <MenuIcon />*/}
-                    {/*</IconButton>*/}
-                    <LocalFloristIcon sx={{ color: theme.palette.primary.main }} />
-                    <Typography component="h1" variant="h6" color={theme.palette.text.primary}>
-                        You are precious
-                    </Typography>
-
-                    <Box sx={{ flexGrow: 1 }}/>
-                    <Box sx={{ display: {xs: 'none', md: 'flex'}, ms: 'auto'}}>
-                        <Button color="primary" variant='text'>
-                            Home
-                        </Button>
-                        <Button color="primary" variant="text">
-                            About
-                        </Button>
-                        <Button color="primary" variant="outlined">
-                            Log in
-                        </Button>
-                        <Button color="primary" variant="contained">
-                            Sign up
-                        </Button>
-                    </Box>
-                </Toolbar>
+            <Container>
+                <Navbar.Brand style={{
+                    color: "whitesmoke"
+                }}>
+                    You are precious
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="ms-auto">
+                        <Nav.Link style={{
+                            color: "whitesmoke"
+                        }}>Home</Nav.Link>
+                        <Nav.Link style={{
+                            color: "whitesmoke"
+                        }}>Categories</Nav.Link>
+                        <Nav.Link style={{
+                            color: "whitesmoke"
+                        }}>Subscribe</Nav.Link>
+                    </Nav>
+                    <div className={"d-flex"}>
+                        <button className={globalStyle.navButton}>Login</button>
+                        <button className={globalStyle.navButton}>Sign up</button>
+                    </div>
+                </Navbar.Collapse>
             </Container>
-        </AppBar>
+        </Navbar>
     );
 }

@@ -2,7 +2,7 @@ import {Credentials} from "../types/credentials.ts";
 import {LoginPayload} from "../types/login-payload.ts";
 
 export const loginCall = async (credentials: Credentials): Promise<LoginPayload> => {
-    const response: Response = await fetch('http://localhost:8080/api/public/login', {
+    const response: Response = await fetch('http://192.168.1.22:8080/api/public/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

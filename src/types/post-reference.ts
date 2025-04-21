@@ -2,6 +2,12 @@ export type PostReference = {
     uuid: string;
     title: string;
     slug: string;
+    postMainImage: {
+        uuid: string;
+        title: string;
+        status: string;
+        slug: string;
+    };
     editor: {
         uuid: string;
         firstName: string;

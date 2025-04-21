@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #3a5a40;
+    --secondary-color: #a3b18a;
+    --background-color: #dad7cd;
+    --text-color: #2b2b2b;
+}
+
 @font-face {
     font-family: 'Playfair Display';
     src: url('../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
@@ -38,4 +45,19 @@
     src: url("../assets/fonts/YesevaOne-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
+}
+.nav-button {
+    padding: 7px;
+    margin: 0 7px;
+    background: transparent;
+    color: whitesmoke;
+    border: whitesmoke solid 1px;
+    border-radius: 7px;
+}
+
+.post-reference-container {
+
+}
+.post-reference-image {
+    width: 100%;
 }

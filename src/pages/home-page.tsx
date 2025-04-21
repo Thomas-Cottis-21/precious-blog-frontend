@@ -1,10 +1,11 @@
-import {Box, Container, Typography} from "@mui/material";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {fetchAllPosts} from "../redux/slices/all-posts-slice.ts";
 import {AppDispatch, RootState} from "../redux/store.ts";
 import {PostReference} from "../types/post-reference.ts";
 import {MainNavBar} from "../components/ui/main-navbar.tsx";
+import {Col, Container, Row} from "react-bootstrap";
+import {PostPreview} from "../components/post/post-preview.tsx";
 
 export const HomePage = () => {
     const dispatch = useDispatch<AppDispatch>();
@@ -38,29 +39,23 @@ export const HomePage = () => {
     return (
         <>
             <MainNavBar />
-            <Container sx={{my: 8}}>
-                <Box>
-                    <Typography component="h1" variant="h1">
-                        How to Cheer Up: Simple Ways to Boost Your Mood
-                    </Typography>
-                    <Typography component="h3" variant="subtitle1">
-                        Because Everyone Needs a Pick-Me-Up Sometimes
-                    </Typography>
-                    <Typography component="p" variant="body1">
-                        Life has its ups and downs, and some days just feel heavier than others. Whether it's stress from work, personal struggles, or just an unexplained case of the blues, we all experience moments when we need a little cheering up. The good news? There are plenty of simple, effective ways to lift your spirits and brighten your day. Let’s explore some of the best ways to turn a rough day into a better one.
-                    </Typography>
-                </Box>
-                {Array.isArray(posts) && posts.map((post: PostReference) => (
-                    <Box key={post.uuid}>
-                        <Typography component="h1" variant="h1">
-                            {post.title}
-                        </Typography>
-                        <Typography component="h3" variant="subtitle1">
-                            {post.editor.firstName} {post.editor.lastName}
-                        </Typography>
-                    </Box>
-                ))}
-            </Container>
+            {posts && posts.length > 0 && (
+                <Container>
+                    <Row>
+                        <Col>
+                            <PostPreview post={posts[0]} />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <PostPreview post={posts[1]} />
+                        </Col>
+                        <Col>
+                            <PostPreview post={posts[2]} />
+                        </Col>
+                    </Row>
+                </Container>
+            )}
         </>
     );
 }
