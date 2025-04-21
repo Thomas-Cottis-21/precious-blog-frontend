@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/styles/global.module.css
 :root {
     --primary-color: #3a5a40;
     --secondary-color: #a3b18a;
@@ -6,9 +5,7 @@
     --text-color: #2b2b2b;
 }
 
-=======
 /* ----- TYPOGRAPHY ----- */
->>>>>>> cbb956e78052cfa6a084230838dd3e7fa88105c7:src/styles/global-style.css
 @font-face {
     font-family: 'Playfair Display';
     src: url('../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
@@ -50,7 +47,6 @@
     font-weight: normal;
     font-style: normal;
 }
-<<<<<<< HEAD:src/styles/global.module.css
 .nav-button {
     padding: 7px;
     margin: 0 7px;
@@ -65,7 +61,7 @@
 }
 .post-reference-image {
     width: 100%;
-=======
+}
 .title {
     font-family: 'Playfair Display';
     font-size: 2.5rem;
@@ -86,5 +82,4 @@ p {
     color: black;
     text-decoration: none;
     font-family: 'Alice';
->>>>>>> cbb956e78052cfa6a084230838dd3e7fa88105c7:src/styles/global-style.css
 }

@@ -39,27 +39,29 @@ export const HomePage = () => {
     return (
         <>
             <MainNavBar />
-            <Container fluid>
-                <Row>
-                    <Col>
-                        <PostReferenceMain post={posts[0]} />
-                    </Col>
-                    <Col>
-                        <PostReferenceMain post={posts[1]} />
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <PostReferenceMain post={posts[0]} />
-                    </Col>
-                    <Col>
-                        <PostReferenceMain post={posts[1]} />
-                    </Col>
-                    <Col>
-                        <PostReferenceMain post={posts[1]} />
-                    </Col>
-                </Row>
-            </Container>
+            {posts && posts.length > 0 && (
+                <Container fluid>
+                    <Row>
+                        <Col>
+                            <PostReferenceMain post={posts[0]} />
+                        </Col>
+                        <Col>
+                            <PostReferenceMain post={posts[1]} />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <PostReferenceMain post={posts[0]} />
+                        </Col>
+                        <Col>
+                            <PostReferenceMain post={posts[1]} />
+                        </Col>
+                        <Col>
+                            <PostReferenceMain post={posts[1]} />
+                        </Col>
+                    </Row>
+                </Container>
+            )}
         </>
     );
 }

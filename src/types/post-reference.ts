@@ -4,9 +4,10 @@ export type PostReference = {
     slug: string;
     postMainImage: {
         uuid: string;
-        title: string;
-        status: string;
-        slug: string;
+        caption: string;
+        imageKey: string;
+        createdAt: Date | string;
+        updatedAt: Date | string;
     };
     editor: {
         uuid: string;

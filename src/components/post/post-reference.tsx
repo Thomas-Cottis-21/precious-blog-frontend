@@ -13,7 +13,7 @@ export const PostReferenceMain = (props:
     return (
         <div>
             <img
-                src={`https://youareprecious.sfo2.cdn.digitaloceanspaces.com${props.post.mainImageKey}`}
+                src={`https://youareprecious.sfo2.cdn.digitaloceanspaces.com/${props.post.postMainImage.imageKey}`}
                 width="100%"
             />
             <h1 className="title">This Is Where the Title Goes</h1>
