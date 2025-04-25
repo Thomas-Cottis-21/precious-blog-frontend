@@ -1,8 +1,9 @@
 :root {
     --primary-color: #3a5a40;
     --secondary-color: #a3b18a;
-    --background-color: #dad7cd;
+    --opaque-color: #dad7cd;
     --text-color: #2b2b2b;
+    --background-color: #fff
 }
 
 /* ----- TYPOGRAPHY ----- */
@@ -47,6 +48,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Quicksand';
+    src: url("../assets/fonts/Quicksand-VariableFont_wght.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 .nav-button {
     padding: 7px;
     margin: 0 7px;
@@ -56,21 +63,37 @@
     border-radius: 7px;
 }
 
+/* ----- POST REFERENCES ----- */
 .post-reference-container {
-
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 .post-reference-image {
     width: 100%;
 }
-.title {
-    font-family: 'Playfair Display';
+.reference-title {
+    font-family: 'Quicksand';
     font-size: 2.5rem;
     color: black;
 }
-.subtitle {
-    font-family: 'Playfair Display';
-    font-size: 1.75rem;
+.reference-title:hover {
+    cursor: pointer;
+}
+.reference-subtitle {
+    font-family: 'Quicksand';
+    font-size: 1.2rem;
     color: black;
+}
+.reference-author {
+    font-family: 'Quicksand';
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+}
+.reference-date {
+    font-family: 'Quicksand';
+    font-size: 1rem;
 }
 p {
     font-family: "Alice"
@@ -78,8 +101,9 @@ p {
 
 /* ----- NAVIGATION ----- */
 .nav-item {
-    padding: 1rem;
+    margin: 0 1rem 0 0;
     color: black;
     text-decoration: none;
-    font-family: 'Alice';
+    font-family: 'Quicksand';
+    font-size: 1.2rem;
 }

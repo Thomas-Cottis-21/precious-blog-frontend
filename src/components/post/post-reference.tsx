@@ -1,5 +1,6 @@
 import {PostReference} from "../../types/post-reference.ts";
 import {useEffect} from "react";
+import globalStyle from "../../styles/global.module.css";
 
 export const PostReferenceMain = (props:
 {
@@ -11,19 +12,21 @@ export const PostReferenceMain = (props:
     }, [props]);
 
     return (
-        <div>
-            <img
-                src={`https://youareprecious.sfo2.cdn.digitaloceanspaces.com/${props.post.postMainImage.imageKey}`}
-                width="100%"
-            />
-            <h1 className="title">This Is Where the Title Goes</h1>
-            <h3 className="subtitle">This Is Where the Subtitle Goes</h3>
-            <p>Savannah Cottis</p>
-            <p>{new Date().toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            })}</p>
-        </div>
-    )
+			<div className={globalStyle.postReferenceContainer}>
+				<img
+					src={`https://images.pexels.com/photos/5006967/pexels-photo-5006967.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`}
+					className={globalStyle.postReferenceImage}
+				/>
+				<h1 className={globalStyle.referenceTitle}>This Is Where the Title Goes</h1>
+				<h3 className={globalStyle.referenceSubtitle}>This is where the subtitle goes</h3>
+				<p className={globalStyle.referenceAuthor}>Savannah Cottis</p>
+				<p className={globalStyle.referenceDate}>
+					{new Date().toLocaleDateString('en-US', {
+						year: 'numeric',
+						month: 'long',
+						day: 'numeric',
+					})}
+				</p>
+			</div>
+		);
 }

@@ -6,6 +6,7 @@ import {PostReference} from "../types/post-reference.ts";
 import {MainNavBar} from "../components/ui/main-navbar.tsx";
 import {Col, Container, Row} from "react-bootstrap";
 import {PostReferenceMain} from "../components/post/post-reference.tsx";
+import globalStyle from "../styles/global.module.css";
 
 export const HomePage = () => {
     const dispatch = useDispatch<AppDispatch>();
@@ -41,22 +42,22 @@ export const HomePage = () => {
             <MainNavBar />
             {posts && posts.length > 0 && (
                 <Container fluid>
-                    <Row>
-                        <Col>
+                    <Row xs={12} md={12}>
+                        <Col xs={12} md={6}>
                             <PostReferenceMain post={posts[0]} />
                         </Col>
-                        <Col>
+                        <Col xs={12} md={6}>
                             <PostReferenceMain post={posts[1]} />
                         </Col>
                     </Row>
                     <Row>
-                        <Col>
+                        <Col xs={12} md={4}>
                             <PostReferenceMain post={posts[0]} />
                         </Col>
-                        <Col>
+                        <Col xs={12} md={4}>
                             <PostReferenceMain post={posts[1]} />
                         </Col>
-                        <Col>
+                        <Col xs={12} md={4}>
                             <PostReferenceMain post={posts[1]} />
                         </Col>
                     </Row>
