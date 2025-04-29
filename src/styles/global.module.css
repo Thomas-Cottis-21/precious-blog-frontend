@@ -80,6 +80,14 @@
 .reference-title:hover {
     cursor: pointer;
 }
+.reference-title-small {
+    font-family: 'Quicksand';
+    font-size: 1.8rem;
+    color: black;
+}
+.reference-title-small:hover {
+    cursor: pointer;
+}
 .reference-subtitle {
     font-family: 'Quicksand';
     font-size: 1.2rem;
@@ -87,9 +95,10 @@
 }
 .reference-author {
     font-family: 'Quicksand';
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin: 0;
     padding: 0;
+    font-style: italic;
 }
 .reference-date {
     font-family: 'Quicksand';

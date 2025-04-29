@@ -11,7 +11,7 @@ export const MainNavBar = () => {
                     fontFamily: "Quicksand",
                 }}>
                     <img
-                        src="../../../public/images/logo/Pink_blue_floral_bouquet_with_watercolor-removebg-preview.png"
+                        src="images/logo/Pink_blue_floral_bouquet_with_watercolor-removebg-preview.png"
                         alt="logo"
                         width="120"
                     />
